@@ -19,7 +19,8 @@ class KomaList {
     }
   }
 
-  AbstractKoma getSelectedKoma() {
+AbstractKoma getSelectedKoma() {
+
     for (AbstractKoma k : komaArray) {
       if (k.kStat.selected) return k;
     }
@@ -31,7 +32,7 @@ class KomaList {
     if (koma != null) koma.kStat.selected=true;
   }
 
-  AbstractKoma getKomaFromPlaceByTeam(int x, int y, int team) {
+AbstractKoma getKomaFromPlaceByTeam(int x, int y, int team) {
     for (AbstractKoma k : this.komaArray) {
       if (team==k.team && x == k.x && y == k.y && k.kStat.active) return k;
     }
